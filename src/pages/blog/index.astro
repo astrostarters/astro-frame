@@ -10,8 +10,7 @@ const posts = await getCollection("blog");
 const sorted = posts.sort(
   (a, b) => b.data.date.getTime() - a.data.date.getTime()
 );
-const latest = sorted.slice(0, 5);
-const normalized = latest.map((post) => ({
+const normalized = sorted.map((post) => ({
   title: post.data.title,
   date: post.data.date,
   url: "/",
