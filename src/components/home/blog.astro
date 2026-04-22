@@ -10,7 +10,7 @@ const sorted = posts.sort(
 const latest = sorted.slice(0, 5);
 ---
 
-<Section title="Blog Posts">
+<Section title="Recent Posts" more={{label: 'View All', url: '/blog'}}>
   <ul class="list-none">
     {latest.map((post) => (
         <li class="flex items-center gap-3 mb-2 last-of-type:mb-0">
