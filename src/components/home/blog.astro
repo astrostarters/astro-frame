@@ -1,6 +1,6 @@
 ---
 import { getCollection } from "astro:content";
-import { formatDate } from "@/helpers/date";
+import List from "../list.astro";
 import Section from "../section.astro";
 
 const posts = await getCollection("blog");
@@ -8,20 +8,13 @@ const sorted = posts.sort(
   (a, b) => b.data.date.getTime() - a.data.date.getTime()
 );
 const latest = sorted.slice(0, 5);
+const normalized = latest.map((post) => ({
+  title: post.data.title,
+  date: post.data.date,
+  url: "/",
+}));
 ---
 
 <Section title="Recent Posts" more={{label: 'View All', url: '/blog'}}>
-  <ul class="list-none">
-    {latest.map((post) => (
-        <li class="flex items-center gap-3 mb-2 last-of-type:mb-0">
-          <a href="/" class="underline underline-offset-4 decoration-dotted">
-            {post.data.title}
-          </a>
-          <div class="grow h-px bg-muted" />
-          <p class="font-mono uppercase text-xs text-muted-foreground">
-            {formatDate(post.data.date)}
-          </p>
-        </li>
-      ))}
-  </ul>
+  <List items={normalized} />
 </Section>

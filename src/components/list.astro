@@ -1,0 +1,27 @@
+---
+import { formatDate } from "@/helpers/date";
+
+interface Props {
+  items: Array<{
+    title: string;
+    url: string;
+    date: Date;
+  }>;
+}
+
+const { items } = Astro.props;
+---
+
+<ul class="list-none font-serif text-lg">
+  {items.map((item) => (
+    <li class="flex items-center gap-3 mb-2 last-of-type:mb-0">
+      <a href="/" class="underline underline-offset-4 decoration-dotted">
+        {item.title}
+      </a>
+      <div class="grow h-px bg-muted" />
+      <p class="font-mono uppercase text-xs text-muted-foreground">
+        {formatDate(item.date)}
+      </p>
+    </li>
+  ))}
+</ul>
