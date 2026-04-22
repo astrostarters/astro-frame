@@ -11,7 +11,7 @@ const latest = sorted.slice(0, 5);
 const normalized = latest.map((post) => ({
   title: post.data.title,
   date: post.data.date,
-  url: "/",
+  url: `/blog/${post.id}`,
 }));
 ---
 

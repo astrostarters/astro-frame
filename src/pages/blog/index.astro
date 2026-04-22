@@ -13,7 +13,7 @@ const sorted = posts.sort(
 const normalized = sorted.map((post) => ({
   title: post.data.title,
   date: post.data.date,
-  url: "/",
+  url: `/blog/${post.id}`,
 }));
 ---
 

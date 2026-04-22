@@ -1,0 +1,26 @@
+---
+import { ArrowBigLeft, ArrowLeft } from "lucide-react";
+
+interface Props {
+  date: Date;
+  description: string;
+  tags?: string[];
+  title: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<section class="font-serif pt-40 pb-25">
+  <div class="font-sans mb-8">
+    <a
+      href="/blog"
+      class="text-sm font-medium text-muted-foreground inline-flex items-center gap-1"
+    >
+      <span><ArrowLeft size={16} /></span>
+      Posts
+    </a>
+  </div>
+  <h1 class="text-xl font-medium">{title}</h1>
+  <p class="text-lg text-muted-foreground">{description}</p>
+</section>
