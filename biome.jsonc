@@ -4,5 +4,27 @@
     "ultracite/biome/core",
     "ultracite/biome/react",
     "ultracite/biome/astro"
+  ],
+  "overrides": [
+    {
+      "includes": ["**/*.astro"],
+      "linter": {
+        "rules": {
+          "correctness": {
+            "useJsxKeyInIterable": "off"
+          },
+          "nursery": {
+            "useSortedClasses": "off"
+          }
+        }
+      },
+      "assist": {
+        "actions": {
+          "source": {
+            "useSortedAttributes": "off"
+          }
+        }
+      }
+    }
   ]
 }
