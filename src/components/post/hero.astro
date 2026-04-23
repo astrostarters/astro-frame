@@ -1,14 +1,16 @@
 ---
-import { ArrowBigLeft, ArrowLeft } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
+import { formatDate } from "@/helpers/date";
 
 interface Props {
   date: Date;
   description: string;
+  readingTime: string;
   tags?: string[];
   title: string;
 }
 
-const { title, description } = Astro.props;
+const { title, description, readingTime, date, tags } = Astro.props;
 ---
 
 <section class="font-serif pt-40 pb-25">
@@ -23,4 +25,14 @@ const { title, description } = Astro.props;
   </div>
   <h1 class="text-xl font-medium">{title}</h1>
   <p class="text-lg text-muted-foreground">{description}</p>
+  <p class="mt-6 flex gap-2 uppercase text-xs">
+    {formatDate(date)} <span>•</span> {readingTime}
+  </p>
+  {tags && (
+      <div class="mt-2 font-mono text-xs text-muted-foreground uppercase flex flex-wrap gap-2">
+        {tags.map((tag) => (
+          <a href={`/blog/tags/${tag}`}>#{tag}</a>
+        ))}
+      </div>
+    )}
 </section>

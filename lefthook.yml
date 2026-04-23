@@ -9,4 +9,5 @@ pre-commit:
         - "**/*.json"
         - "**/*.jsonc"
         - "**/*.css"
+        - "**/*.astro"
       stage_fixed: true
