@@ -8,7 +8,7 @@ import robotsTxt from "astro-robots-txt";
 import { remarkReadingTime } from "./plugins/remark-reading-time.mjs";
 
 export default defineConfig({
-  site: "https://eample.com",
+  site: "https://example.com",
   integrations: [react(), mdx(), sitemap(), robotsTxt()],
   vite: {
     plugins: [tailwindcss()],
