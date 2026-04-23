@@ -12,7 +12,7 @@ const tags = [...new Set(posts.flatMap((post) => post.data.tags || []))].sort(
 );
 ---
 
-<Layout>
+<Layout title="Tags" description="Explore posts by tags.">
   <Container>
     <Hero
       title="Tags"

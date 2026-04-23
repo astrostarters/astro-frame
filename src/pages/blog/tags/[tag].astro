@@ -43,7 +43,7 @@ const normalizedPosts = sortedPosts.map((post) => ({
 }));
 ---
 
-<Layout>
+<Layout title={`#${tag}`} description={`Posts tagged with #${tag}.`}>
   <Container>
     <Hero
       title={`#${tag}`}
