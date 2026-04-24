@@ -1,6 +1,7 @@
 import { getCollection } from "astro:content";
 import rss from "@astrojs/rss";
 import type { APIRoute } from "astro";
+import { siteConfig } from "@/config/site";
 
 export const GET: APIRoute = async (ctx) => {
   const posts = await getCollection("blog");
@@ -12,8 +13,8 @@ export const GET: APIRoute = async (ctx) => {
   }));
 
   return rss({
-    title: "Astro Frame's Feed",
-    description: "My Astro blog RSS feed",
+    title: siteConfig.title,
+    description: siteConfig.description,
     site: ctx.site || "",
     items,
   });

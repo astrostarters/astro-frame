@@ -1,6 +1,8 @@
 ---
 import { SEO } from "astro-seo";
 
+import { siteConfig } from "@/config/site";
+
 import "@/styles/global.css";
 
 interface Props {
@@ -8,9 +10,8 @@ interface Props {
   title?: string;
 }
 
-const title = Astro.props.title || "Astro Frame";
-const description =
-  Astro.props.description || "A simple Astro blog starter kit";
+const title = Astro.props.title || siteConfig.title;
+const description = Astro.props.description || siteConfig.description;
 ---
 
 <!doctype html>
