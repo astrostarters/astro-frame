@@ -4,6 +4,7 @@ import { SEO } from "astro-seo";
 import { siteConfig } from "@/config/site";
 
 import "@/styles/global.css";
+import { Font } from "astro:assets";
 
 interface Props {
   description?: string;
@@ -22,6 +23,9 @@ const description = Astro.props.description || siteConfig.description;
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
+
+    <Font cssVariable="--font-geist" />
+    <Font cssVariable="--font-geist-mono" />
 
     <SEO title={title} description={description} />
   </head>

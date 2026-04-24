@@ -10,10 +10,10 @@ interface Props {
 const { title, more } = Astro.props;
 ---
 
-<section class="text-lg font-serif last-of-type:mb-0 mb-25">
+<section class="last-of-type:mb-0 mb-25">
   <header class="flex items-center justify-between">
     <h2 class="font-medium">{title}</h2>
-    {more && <a class="font-sans text-sm text-muted-foreground" href={more.url}>({more.label})</a>}
+    {more && <a class="text-sm text-muted-foreground" href={more.url}>({more.label})</a>}
   </header>
 
   <div class="mt-8"><slot /></div>

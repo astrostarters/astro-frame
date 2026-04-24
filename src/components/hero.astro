@@ -11,14 +11,14 @@ interface Props {
 const { title, description, backLabel, backUrl } = Astro.props;
 ---
 
-<section class="font-serif pt-40 pb-25">
-  <div class="font-sans mb-8">
+<section class="pt-40 pb-25">
+  <div class="mb-8">
     <a
       href={backUrl}
-      class="text-sm font-medium text-muted-foreground inline-flex items-center gap-1"
-      ><span><ArrowLeft size={16} /></span> {backLabel}</a
+      class="text-xs font-medium text-muted-foreground inline-flex items-center gap-1"
+      ><span><ArrowLeft size={12} /></span> {backLabel}</a
     >
   </div>
-  <h1 class="text-xl font-medium">{title}</h1>
-  <p class="text-lg text-muted-foreground">{description}</p>
+  <h1 class="font-medium">{title}</h1>
+  <p class="text-muted-foreground">{description}</p>
 </section>

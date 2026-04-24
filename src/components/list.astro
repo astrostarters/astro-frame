@@ -12,10 +12,10 @@ interface Props {
 const { items } = Astro.props;
 ---
 
-<ul class="list-none font-serif text-lg">
+<ul class="list-none">
   {items.map((item) => (
-    <li class="flex items-center gap-3 mb-2 last-of-type:mb-0">
-      <a href={item.url} class="underline underline-offset-4 decoration-dotted">
+    <li class="flex items-center gap-3 mb-3 last-of-type:mb-0">
+      <a href={item.url} class="font-medium underline underline-offset-4 decoration-dotted">
         {item.title}
       </a>
       <div class="grow h-px bg-muted" />
