@@ -18,6 +18,7 @@
   "dependencies": {
     "@astrojs/mdx": "^5.0.3",
     "@astrojs/react": "^5.0.3",
+    "@astrojs/rss": "^4.0.18",
     "@astrojs/sitemap": "^3.7.2",
     "@base-ui/react": "^1.4.1",
     "@fontsource-variable/eb-garamond": "^5.2.7",
