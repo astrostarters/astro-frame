@@ -26,6 +26,6 @@ pnpm dev
 - 🧰 **shadcn/ui** configured and ready to use
 - 🌗 **Dark/light/system** theme toggle with saved preference
 - 🔎 **SEO basics** included (`astro-seo`, `sitemap`, `robots.txt`)
-- 📦 **RSS feed** for the blog posts.
+- 📦 **RSS feed** for the blog posts
 - ⚙️ TypeScript strict + path aliases (`@/*`)
 - 🧼 Code quality tooling out of the box (**Biome/Ultracite** + **pre-commit hooks**)
