@@ -1,3 +1,5 @@
+![Astro Sonnet Banner](/assets/banner.webp)
+
 ## Astro Sonnet 📜
 
 > A polished blog and portfolio starter built with Astro for content-driven sites.
