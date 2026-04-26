@@ -1,11 +1,11 @@
-## Astro Frame 🍪
+## Astro Sonnet 🍪
 
 > A polished blog and portfolio starter built with Astro for content-driven sites.
 
 ### Get Started
 
 ```
-pnpm dlx degit astrostarters/astro-frame my-blog
+pnpm dlx degit astrostarters/astro-sonnet my-blog
 
 cd my-blog
 
